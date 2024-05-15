@@ -2,26 +2,7 @@
 @import 'mixins';
 @import 'globals';
 
-//nav
-nav{
-    position: fixed;
-    background: rgba($black, .8);
-    width: 100%;
-    z-index: 100;
-    .container{
-        @include flex;
-        ul{
-           @include flex;
-           a{
-            color: $saccents;
-            margin-left: 50px;
-            &:hover{
-                color: $white;
-            }
-           }
-        }
-    }
-}
+
 
 
 .mainHeader {
@@ -33,8 +14,6 @@ nav{
     color: $white;
     position: relative;
     img {
-        width: 100%;
-        display: block;
         height: 800px;
         object-fit: cover;
     }
@@ -42,9 +21,34 @@ nav{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-    }
+        transform: translate(50%, 50%);
     p{
        padding: 20px 0 40px 0; 
+    }
+}
+}
+
+//ponuda 
+.ponuda {
+    h2 {
+        color: $accents;
+        & + p {
+            padding: 25px 0 76px 0;
+        }
+    }
+
+    article {
+        @include flex;
+        div{
+            flex: 0 0 32%;
+            img{
+                border: 5px solid $accents;
+                border-radius: 100%;
+            }
+            h3{
+                margin: 45px 0 10px 0;
+                font-size: 24px;
+            }
+        }
     }
 }
